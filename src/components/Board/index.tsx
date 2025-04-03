@@ -3,13 +3,13 @@
 import React, { useState } from 'react';
 import { DragDropContext, Droppable } from '@hello-pangea/dnd';
 import Column from '@/components/Column';
+import AddColumn from '@/components/Column/AddColumn';
 import TaskModal from '@/components/Modal/TaskModal';
 import ColumnModal from '@/components/Modal/ColumnModal';
 import DeleteConfirmationModal from '@/components/Modal/DeleteConfirmationModal';
 import { useBoard } from '@/hooks/useBoard';
 import { Task } from '@/types';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
+import PageLayout from '@/components/layout/PageLayout';
 
 const Board: React.FC = () => {
   const {
@@ -93,16 +93,14 @@ const Board: React.FC = () => {
   }
 
   return (
-    <div className="h-full flex flex-col">
-      <Header onAddColumn={() => setIsColumnModalOpen(true)} />
-
+    <PageLayout>
       <DragDropContext onDragEnd={handleDragEnd}>
         <Droppable droppableId="all-columns" direction="horizontal" type="column">
           {(provided) => (
             <div
               {...provided.droppableProps}
               ref={provided.innerRef}
-              className="flex gap-3 sm:gap-4 p-2 sm:p-4 overflow-x-auto h-[calc(100vh-140px)] pb-4 touch-pan-x bg-background flex-grow"
+              className="flex gap-3 sm:gap-4 p-2 sm:p-4 overflow-x-auto h-[calc(100vh-140px)] pb-4 touch-pan-x flex-grow"
             >
               {board.columnOrder.map((columnId, index) => {
                 const column = board.columns[columnId];
@@ -123,6 +121,7 @@ const Board: React.FC = () => {
                   />
                 );
               })}
+              <AddColumn onAddColumn={() => setIsColumnModalOpen(true)} />
               {provided.placeholder}
             </div>
           )}
@@ -161,9 +160,7 @@ const Board: React.FC = () => {
           }
         />
       )}
-
-      <Footer />
-    </div>
+    </PageLayout>
   );
 };
 
