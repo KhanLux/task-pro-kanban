@@ -8,9 +8,9 @@ import { cn } from '@/lib/utils';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-interface HeaderProps {}
+// No props needed for Header component
 
-const Header: React.FC<HeaderProps> = () => {
+const Header: React.FC = () => {
   const pathname = usePathname();
   return (
     <header className="flex flex-col sm:flex-row justify-between items-center p-4 sm:p-5 bg-card shadow-sm gap-3 sm:gap-0 border-b relative overflow-hidden">

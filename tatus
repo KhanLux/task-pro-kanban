@@ -1,0 +1,54 @@
+[1mdiff --git a/src/components/theme-provider.tsx b/src/components/theme-provider.tsx[m
+[1mindex 8c90fbc..b8688f4 100644[m
+[1m--- a/src/components/theme-provider.tsx[m
+[1m+++ b/src/components/theme-provider.tsx[m
+[36m@@ -2,7 +2,21 @@[m
+ [m
+ import * as React from "react"[m
+ import { ThemeProvider as NextThemesProvider } from "next-themes"[m
+[31m-import { type ThemeProviderProps } from "next-themes/dist/types"[m
+[32m+[m
+[32m+[m[32m// Define the Attribute type to match next-themes expectations[m
+[32m+[m[32mtype DataAttribute = `data-${string}`[m
+[32m+[m[32mtype Attribute = DataAttribute | 'class'[m
+[32m+[m
+[32m+[m[32mtype ThemeProviderProps = {[m
+[32m+[m[32m  children: React.ReactNode[m
+[32m+[m[32m  attribute?: Attribute | Attribute[][m
+[32m+[m[32m  defaultTheme?: string[m
+[32m+[m[32m  enableSystem?: boolean[m
+[32m+[m[32m  disableTransitionOnChange?: boolean[m
+[32m+[m[32m  storageKey?: string[m
+[32m+[m[32m  forcedTheme?: string[m
+[32m+[m[32m  themes?: string[][m
+[32m+[m[32m}[m
+ [m
+ export function ThemeProvider({ children, ...props }: ThemeProviderProps) {[m
+   return <NextThemesProvider {...props}>{children}</NextThemesProvider>[m
+[1mdiff --git a/src/components/ui/theme-provider.tsx b/src/components/ui/theme-provider.tsx[m
+[1mindex 8c90fbc..456e5b7 100644[m
+[1m--- a/src/components/ui/theme-provider.tsx[m
+[1m+++ b/src/components/ui/theme-provider.tsx[m
+[36m@@ -2,7 +2,21 @@[m
+ [m
+ import * as React from "react"[m
+ import { ThemeProvider as NextThemesProvider } from "next-themes"[m
+[31m-import { type ThemeProviderProps } from "next-themes/dist/types"[m
+[32m+[m
+[32m+[m[32m// Define the types based on next-themes[m
+[32m+[m[32mtype DataAttribute = `data-${string}`[m
+[32m+[m[32mtype Attribute = DataAttribute | 'class'[m
+[32m+[m
+[32m+[m[32mtype ThemeProviderProps = {[m
+[32m+[m[32m  children: React.ReactNode[m
+[32m+[m[32m  attribute?: Attribute | Attribute[][m
+[32m+[m[32m  defaultTheme?: string[m
+[32m+[m[32m  enableSystem?: boolean[m
+[32m+[m[32m  disableTransitionOnChange?: boolean[m
+[32m+[m[32m  storageKey?: string[m
+[32m+[m[32m  forcedTheme?: string[m
+[32m+[m[32m  themes?: string[][m
+[32m+[m[32m}[m
+ [m
+ export function ThemeProvider({ children, ...props }: ThemeProviderProps) {[m
+   return <NextThemesProvider {...props}>{children}</NextThemesProvider>[m

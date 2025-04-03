@@ -20,7 +20,7 @@ const Task: React.FC<TaskProps> = ({ task, index, onEdit, onDelete }) => {
   const formatDueDate = (dateString: string) => {
     try {
       return format(parseISO(dateString), 'MMM dd, yyyy');
-    } catch (error) {
+    } catch {
       return dateString;
     }
   };

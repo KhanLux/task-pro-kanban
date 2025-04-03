@@ -1,12 +1,11 @@
 "use client";
 
 import React, { useMemo } from 'react';
-import { Board, Task } from '@/types';
+import { Board } from '@/types';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
 import { Badge } from '@/components/ui/badge';
-import { cn } from '@/lib/utils';
-import { IconChartBar, IconChartPie, IconCheckbox, IconClock, IconList } from '@tabler/icons-react';
+import { IconChartPie, IconCheckbox, IconClock, IconList } from '@tabler/icons-react';
 
 interface StatisticsProps {
   board: Board;
