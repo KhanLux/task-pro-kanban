@@ -31,7 +31,7 @@ const Footer: React.FC = () => {
         </a>
 
         <a
-          href="https://linkedin.com/in/khanlux"
+          href="https://www.linkedin.com/in/kevin-collazos-783564224/"
           target="_blank"
           rel="noopener noreferrer"
           className={cn(
