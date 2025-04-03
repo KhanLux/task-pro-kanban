@@ -44,27 +44,27 @@ export const getInitialData = (): Board => {
   // Create columns
   const todoColumn: Column = {
     id: 'column-1',
-    title: 'To Do',
+    title: 'Por Hacer',
     taskIds: ['task-1', 'task-2', 'task-3'],
   };
 
   const inProgressColumn: Column = {
     id: 'column-2',
-    title: 'In Progress',
+    title: 'En Progreso',
     taskIds: ['task-4'],
   };
 
   const doneColumn: Column = {
     id: 'column-3',
-    title: 'Done',
+    title: 'Terminado',
     taskIds: ['task-5'],
   };
 
   // Create tasks
   const task1: Task = {
     id: 'task-1',
-    title: 'Create project structure',
-    description: 'Set up the initial project structure and dependencies',
+    title: 'Crear estructura del proyecto',
+    description: 'Configurar la estructura inicial del proyecto y dependencias',
     category: 'task',
     priority: 'high',
     dueDate: formatDate(new Date(Date.now() + 86400000)), // Tomorrow
@@ -73,8 +73,8 @@ export const getInitialData = (): Board => {
 
   const task2: Task = {
     id: 'task-2',
-    title: 'Design UI components',
-    description: 'Create UI components for the Kanban board',
+    title: 'Diseñar componentes UI',
+    description: 'Crear componentes UI para el tablero Kanban',
     category: 'feature',
     priority: 'medium',
     dueDate: formatDate(new Date(Date.now() + 2 * 86400000)), // Day after tomorrow
@@ -83,8 +83,8 @@ export const getInitialData = (): Board => {
 
   const task3: Task = {
     id: 'task-3',
-    title: 'Implement drag and drop',
-    description: 'Add drag and drop functionality to the Kanban board',
+    title: 'Implementar arrastrar y soltar',
+    description: 'Añadir funcionalidad de arrastrar y soltar al tablero Kanban',
     category: 'feature',
     priority: 'high',
     dueDate: formatDate(new Date(Date.now() + 3 * 86400000)),
@@ -93,8 +93,8 @@ export const getInitialData = (): Board => {
 
   const task4: Task = {
     id: 'task-4',
-    title: 'Fix responsive layout',
-    description: 'Make the Kanban board responsive on all devices',
+    title: 'Arreglar diseño responsive',
+    description: 'Hacer que el tablero Kanban sea responsive en todos los dispositivos',
     category: 'bug',
     priority: 'medium',
     dueDate: formatDate(new Date(Date.now() + 1 * 86400000)),
@@ -103,8 +103,8 @@ export const getInitialData = (): Board => {
 
   const task5: Task = {
     id: 'task-5',
-    title: 'Add task filtering',
-    description: 'Implement filtering tasks by category and priority',
+    title: 'Añadir filtrado de tareas',
+    description: 'Implementar filtrado de tareas por categoría y prioridad',
     category: 'improvement',
     priority: 'low',
     dueDate: formatDate(new Date(Date.now() + 5 * 86400000)),
