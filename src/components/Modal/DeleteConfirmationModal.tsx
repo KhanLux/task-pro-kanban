@@ -26,19 +26,19 @@ const DeleteConfirmationModal: React.FC<DeleteConfirmationModalProps> = ({
       <div className="bg-card rounded-lg shadow-xl w-full max-w-md border">
         <div className="p-4 sm:p-6">
           <h2 className="text-xl font-semibold mb-2 text-card-foreground">
-            Confirm Deletion
+            Confirmar Eliminación
           </h2>
           <p className="text-muted-foreground mb-4">
-            Are you sure you want to delete this {type}
-            {itemName ? `: "${itemName}"` : ''}? This action cannot be undone.
+            ¿Estás seguro de que quieres eliminar {type === 'task' ? 'esta tarea' : 'esta columna'}
+            {itemName ? `: "${itemName}"` : ''}? Esta acción no se puede deshacer.
           </p>
 
           <div className="flex justify-end space-x-2">
             <Button type="button" variant="outline" onClick={onClose}>
-              Cancel
+              Cancelar
             </Button>
             <Button type="button" variant="destructive" onClick={onConfirm}>
-              Delete
+              Eliminar
             </Button>
           </div>
         </div>

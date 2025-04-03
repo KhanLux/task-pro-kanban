@@ -31,28 +31,28 @@ const ColumnModal: React.FC<ColumnModalProps> = ({
       <div className="bg-card rounded-lg shadow-xl w-full max-w-md border">
         <div className="p-4 sm:p-6">
           <h2 className="text-xl font-semibold mb-4 text-card-foreground">
-            Create New Column
+            Crear Nueva Columna
           </h2>
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="space-y-2">
               <label htmlFor="title" className="text-sm font-medium text-card-foreground">
-                Title
+                Título
               </label>
               <Input
                 id="title"
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
-                placeholder="e.g., To Do, In Progress, Done"
+                placeholder="ej., Por Hacer, En Progreso, Terminado"
                 required
               />
             </div>
 
             <div className="flex justify-end space-x-2 mt-6">
               <Button type="button" variant="outline" onClick={onClose}>
-                Cancel
+                Cancelar
               </Button>
               <Button type="submit">
-                Create
+                Crear
               </Button>
             </div>
           </form>

@@ -47,7 +47,7 @@ const Task: React.FC<TaskProps> = ({ task, index, onEdit, onDelete }) => {
               <button
                 onClick={() => onEdit(task.id)}
                 className="text-muted-foreground hover:text-primary transition-colors"
-                aria-label="Edit task"
+                aria-label="Editar tarea"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -67,7 +67,7 @@ const Task: React.FC<TaskProps> = ({ task, index, onEdit, onDelete }) => {
               <button
                 onClick={() => onDelete(task.id)}
                 className="text-muted-foreground hover:text-destructive transition-colors"
-                aria-label="Delete task"
+                aria-label="Eliminar tarea"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -101,7 +101,7 @@ const Task: React.FC<TaskProps> = ({ task, index, onEdit, onDelete }) => {
           </div>
 
           <div className="text-xs text-muted-foreground">
-            Due: {formatDueDate(task.dueDate)}
+            Fecha límite: {formatDueDate(task.dueDate)}
           </div>
         </div>
       )}

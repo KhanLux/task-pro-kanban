@@ -7,7 +7,7 @@ import { format } from 'date-fns';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+// Importaciones de componentes UI
 
 interface TaskModalProps {
   isOpen: boolean;
@@ -65,31 +65,31 @@ const TaskModal: React.FC<TaskModalProps> = ({
       <div className="bg-card rounded-lg shadow-xl w-full max-w-md border">
         <div className="p-4 sm:p-6">
           <h2 className="text-xl font-semibold mb-4 text-card-foreground">
-            {task ? 'Edit Task' : 'Create New Task'}
+            {task ? 'Editar Tarea' : 'Crear Nueva Tarea'}
           </h2>
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="space-y-2">
               <label htmlFor="title" className="text-sm font-medium text-card-foreground">
-                Title
+                Título
               </label>
               <Input
                 id="title"
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
-                placeholder="Task title"
+                placeholder="Título de la tarea"
                 required
               />
             </div>
 
             <div className="space-y-2">
               <label htmlFor="description" className="text-sm font-medium text-card-foreground">
-                Description
+                Descripción
               </label>
               <Textarea
                 id="description"
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
-                placeholder="Task description"
+                placeholder="Descripción de la tarea"
                 rows={3}
                 required
               />
@@ -98,7 +98,7 @@ const TaskModal: React.FC<TaskModalProps> = ({
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div className="space-y-2">
                 <label htmlFor="category" className="text-sm font-medium text-card-foreground">
-                  Category
+                  Categoría
                 </label>
                 <select
                   id="category"
@@ -106,16 +106,16 @@ const TaskModal: React.FC<TaskModalProps> = ({
                   onChange={(e) => setCategory(e.target.value as Category)}
                   className="w-full px-3 py-2 border border-input bg-background rounded-md text-sm"
                 >
-                  <option value="feature">Feature</option>
-                  <option value="bug">Bug</option>
-                  <option value="task">Task</option>
-                  <option value="improvement">Improvement</option>
+                  <option value="feature">Funcionalidad</option>
+                  <option value="bug">Error</option>
+                  <option value="task">Tarea</option>
+                  <option value="improvement">Mejora</option>
                 </select>
               </div>
 
               <div className="space-y-2">
                 <label htmlFor="priority" className="text-sm font-medium text-card-foreground">
-                  Priority
+                  Prioridad
                 </label>
                 <select
                   id="priority"
@@ -123,16 +123,16 @@ const TaskModal: React.FC<TaskModalProps> = ({
                   onChange={(e) => setPriority(e.target.value as Priority)}
                   className="w-full px-3 py-2 border border-input bg-background rounded-md text-sm"
                 >
-                  <option value="low">Low</option>
-                  <option value="medium">Medium</option>
-                  <option value="high">High</option>
+                  <option value="low">Baja</option>
+                  <option value="medium">Media</option>
+                  <option value="high">Alta</option>
                 </select>
               </div>
             </div>
 
             <div className="space-y-2">
               <label htmlFor="dueDate" className="text-sm font-medium text-card-foreground">
-                Due Date
+                Fecha Límite
               </label>
               <Input
                 type="date"
@@ -145,10 +145,10 @@ const TaskModal: React.FC<TaskModalProps> = ({
 
             <div className="flex justify-end space-x-2 mt-6">
               <Button type="button" variant="outline" onClick={onClose}>
-                Cancel
+                Cancelar
               </Button>
               <Button type="submit">
-                {task ? 'Update' : 'Create'}
+                {task ? 'Actualizar' : 'Crear'}
               </Button>
             </div>
           </form>

@@ -41,7 +41,7 @@ const Column: React.FC<ColumnProps> = ({
               <button
                 onClick={() => onAddTask(column.id)}
                 className="p-1 text-muted-foreground hover:text-primary rounded transition-all duration-200 hover:scale-110 active:scale-95"
-                aria-label="Add task"
+                aria-label="Añadir tarea"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -61,7 +61,7 @@ const Column: React.FC<ColumnProps> = ({
               <button
                 onClick={() => onDeleteColumn(column.id)}
                 className="p-1 text-muted-foreground hover:text-destructive rounded transition-all duration-200 hover:scale-110 active:scale-95"
-                aria-label="Delete column"
+                aria-label="Eliminar columna"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -106,7 +106,7 @@ const Column: React.FC<ColumnProps> = ({
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
                       </svg>
                     </div>
-                    No tasks yet
+                    No hay tareas aún
                   </div>
                 )}
               </div>
