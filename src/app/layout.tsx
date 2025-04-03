@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Kanban Board | Task Management",
-  description: "A Kanban board application for task management with drag-and-drop functionality",
+  title: "GestorTareas Pro | Gestión de Tareas",
+  description: "Una aplicación de tablero Kanban para gestión de tareas con funcionalidad de arrastrar y soltar",
 };
 
 export const viewport = {
